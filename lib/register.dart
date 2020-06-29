@@ -7,7 +7,26 @@ class RegisterPage extends StatelessWidget {
   }
 }
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
+  @override
+  _RegisterScreenState createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  int _radioValue = 0;
+  String selectedGender = '';
+
+  void _handleRadioValueChange(int value) {
+    setState(() {
+      _radioValue = value;
+      if (_radioValue == 0) {
+        selectedGender = 'Male';
+      } else {
+        selectedGender = 'Female';
+      }
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
@@ -107,9 +126,39 @@ class RegisterScreen extends StatelessWidget {
               Container(
                 margin: EdgeInsets.all(10),
                 padding: EdgeInsets.symmetric(horizontal: 5),
+                child: new Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    new Text(
+                      'Gender',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    new Radio(
+                        value: 0,
+                        groupValue: _radioValue,
+                        onChanged: _handleRadioValueChange),
+                    new Text('Male',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold)),
+                    new Radio(
+                        value: 1,
+                        groupValue: _radioValue,
+                        onChanged: _handleRadioValueChange),
+                    new Text('Female',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold))
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(10),
+                padding: EdgeInsets.symmetric(horizontal: 5),
                 child: TextFormField(
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     labelText: 'Phone Number',
                     hintText: 'Phone Number',
