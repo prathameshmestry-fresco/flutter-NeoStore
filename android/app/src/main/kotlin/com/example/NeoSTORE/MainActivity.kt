@@ -1,0 +1,6 @@
+package com.example.NeoSTORE
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
