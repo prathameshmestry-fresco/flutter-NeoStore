@@ -59,6 +59,7 @@ class LoginScreen extends StatelessWidget {
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.lock),
                 ),
+                obscureText: true,
                 validator: (value) {
                   if (value.isEmpty) {
                     return 'Please enter password';

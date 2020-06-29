@@ -54,9 +54,9 @@ class RegisterScreen extends StatelessWidget {
                   decoration: InputDecoration(
                     labelText: 'Last Name',
                     hintText: 'Last Name',
-                    border: new OutlineInputBorder(borderSide: new BorderSide(color: Colors.white)),
+                    border: new OutlineInputBorder(
+                        borderSide: new BorderSide(color: Colors.white)),
                     prefixIcon: Icon(Icons.person),
-                    
                   ),
                 ),
               ),
@@ -86,6 +86,7 @@ class RegisterScreen extends StatelessWidget {
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.lock),
                   ),
+                  obscureText: true,
                 ),
               ),
               Container(
@@ -100,6 +101,7 @@ class RegisterScreen extends StatelessWidget {
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.lock),
                   ),
+                  obscureText: true,
                 ),
               ),
               Container(
