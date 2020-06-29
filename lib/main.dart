@@ -18,7 +18,6 @@ class LoginScreen extends StatelessWidget {
     return new Scaffold(
       backgroundColor: Colors.red,
       body: Form(
-
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,6 +40,12 @@ class LoginScreen extends StatelessWidget {
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.person),
                 ),
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Please enter username';
+                  }
+                  return null;
+                },
               ),
             ),
             Container(
@@ -54,6 +59,12 @@ class LoginScreen extends StatelessWidget {
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(Icons.lock),
                 ),
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Please enter password';
+                  }
+                  return null;
+                },
               ),
             ),
             Container(
@@ -68,9 +79,7 @@ class LoginScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       fontSize: 25),
                 ),
-                onPressed: () {
-                  
-                },
+                onPressed: () {},
                 color: Colors.white,
               ),
             ),
