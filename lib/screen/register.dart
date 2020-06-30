@@ -13,6 +13,7 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  bool _isAgreeTerms = false;
   int _radioValue = 0;
   String selectedGender = '';
 
@@ -165,6 +166,25 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.phone),
                   ),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(10),
+                padding: EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  children: <Widget>[
+                    new Checkbox(
+                        value: _isAgreeTerms,
+                        onChanged: (val) {
+                          setState(() {
+                            _isAgreeTerms = true;
+                          });
+                        }),
+                    new Text(
+                      'I Agree Terms & Conditions',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
                 ),
               ),
               Container(

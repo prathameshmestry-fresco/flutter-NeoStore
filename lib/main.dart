@@ -1,4 +1,4 @@
-import './register.dart';
+import './screen/register.dart';
 import 'package:flutter/material.dart';
 
 void main() {
