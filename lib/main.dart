@@ -113,7 +113,7 @@ class LoginScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => RegisterPage()));
+                              builder: (context) => RegisterScreen()));
                     },
                     child: Icon(Icons.add),
                     backgroundColor: Colors.redAccent,
