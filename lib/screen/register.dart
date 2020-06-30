@@ -1,3 +1,4 @@
+import 'package:NeoSTORE/screen/HomeScreen.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -200,10 +201,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         fontSize: 25),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => RegisterPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
                   },
                   color: Colors.white,
                 ),
