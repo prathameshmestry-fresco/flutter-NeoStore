@@ -1,3 +1,4 @@
+import 'package:NeoSTORE/model/ProductCategory.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,28 @@ class HomeScreenPage extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
+  final List<ProductCategory> categorList = [
+    ProductCategory(
+        id: 1,
+        title: 'Tables',
+        imageUrl:
+            'https://simpleicon.com/wp-content/uploads/table-256x256.png'),
+    ProductCategory(
+        id: 2,
+        title: 'Sofas',
+        imageUrl:
+            'https://simpleicon.com/wp-content/uploads/table-256x256.png'),
+    ProductCategory(
+        id: 3,
+        title: 'Chairs',
+        imageUrl:
+            'https://simpleicon.com/wp-content/uploads/table-256x256.png'),
+    ProductCategory(
+        id: 4,
+        title: 'Cupboards',
+        imageUrl: 'https://simpleicon.com/wp-content/uploads/table-256x256.png')
+  ];
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -23,19 +46,21 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          GridView.builder(
+          new GridView.builder(
             padding: const EdgeInsets.all(10),
-            itemCount: 4,
+            itemCount: categorList.length,
             itemBuilder: (ctxt, i) => Container(
               child: GridTile(
                 child: Image.network(
-                  'https://simpleicon.com/wp-content/uploads/table-256x256.png',
+                  categorList[i].imageUrl,
                   fit: BoxFit.cover,
                 ),
                 footer: GridTileBar(
                   title: Text(
-                    'Table',
+                    categorList[i].title,
                     textAlign: TextAlign.left,
                   ),
                 ),
