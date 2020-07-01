@@ -9,15 +9,15 @@ class ProductCategoryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridTile(
-      child: Image.network(
-        imageUrl,
-        fit: BoxFit.cover,
-      ),
-      footer: GridTileBar(
-        title: Text(
+    return Card(
+      child: new Container(
+        padding: const EdgeInsets.all(10),
+        color: Colors.red,
+        child: Text(
           title,
-          style: TextStyle(color: Colors.white),
+          textAlign: TextAlign.end,
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
     );

@@ -40,30 +40,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        title: Text(
-          'NeoSTORE',
-          style: TextStyle(color: Colors.white),
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          title: Text(
+            'NeoSTORE',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          GridView.builder(
-            padding: const EdgeInsets.all(10),
-            itemCount: categorList.length,
-            itemBuilder: (context, i) => ProductCategoryTile(categorList[i].id,
-                categorList[i].title, categorList[i].imageUrl),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 3 / 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10),
-          )
-        ],
-      ),
-    );
+        body: GridView.builder(
+          padding: const EdgeInsets.all(10),
+          itemCount: categorList.length,
+          itemBuilder: (context, i) => ProductCategoryTile(
+              categorList[i].id, categorList[i].title, categorList[i].imageUrl),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 3 / 2,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10),
+        ));
   }
 }
