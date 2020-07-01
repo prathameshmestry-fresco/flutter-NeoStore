@@ -1,4 +1,6 @@
-import 'package:NeoSTORE/model/ProductCategory.dart';
+import '../widgets/ProductCategoryTile.dart';
+
+import '../model/ProductCategory.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -49,23 +51,11 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          new GridView.builder(
+          GridView.builder(
             padding: const EdgeInsets.all(10),
             itemCount: categorList.length,
-            itemBuilder: (ctxt, i) => Container(
-              child: GridTile(
-                child: Image.network(
-                  categorList[i].imageUrl,
-                  fit: BoxFit.cover,
-                ),
-                footer: GridTileBar(
-                  title: Text(
-                    categorList[i].title,
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ),
-            ),
+            itemBuilder: (context, i) => ProductCategoryTile(categorList[i].id,
+                categorList[i].title, categorList[i].imageUrl),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 3 / 2,
