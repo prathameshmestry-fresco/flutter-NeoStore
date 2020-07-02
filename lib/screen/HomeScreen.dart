@@ -46,6 +46,9 @@ class HomeScreen extends StatelessWidget {
             'NeoSTORE',
             style: TextStyle(color: Colors.white),
           ),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.search), onPressed: () {})
+          ],
         ),
         body: GridView.builder(
           padding: const EdgeInsets.all(10),
