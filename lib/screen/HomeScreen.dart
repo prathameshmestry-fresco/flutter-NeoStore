@@ -50,8 +50,15 @@ class HomeScreen extends StatelessWidget {
         body: GridView.builder(
           padding: const EdgeInsets.all(10),
           itemCount: categorList.length,
-          itemBuilder: (context, i) => ProductCategoryTile(
-              categorList[i].id, categorList[i].title, categorList[i].imageUrl),
+          itemBuilder: (context, i) => new InkResponse(
+            enableFeedback: true,
+            child: ProductCategoryTile(categorList[i].id, categorList[i].title,
+                categorList[i].imageUrl),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()));
+            },
+          ),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               childAspectRatio: 3 / 2,
