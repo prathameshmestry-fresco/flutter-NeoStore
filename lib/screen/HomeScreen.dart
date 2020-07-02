@@ -1,3 +1,5 @@
+import 'package:NeoSTORE/screen/ProductListingScreen.dart';
+
 import '../widgets/ProductCategoryTile.dart';
 
 import '../model/ProductCategory.dart';
@@ -58,8 +60,10 @@ class HomeScreen extends StatelessWidget {
             child: ProductCategoryTile(categorList[i].id, categorList[i].title,
                 categorList[i].imageUrl),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ProductListingScreen()));
             },
           ),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
