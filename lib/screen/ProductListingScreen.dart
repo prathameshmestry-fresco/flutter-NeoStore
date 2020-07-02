@@ -29,7 +29,7 @@ class ProductListingScreen extends StatelessWidget {
             return Container(
               color: Colors.grey,
               padding: const EdgeInsets.all(10),
-              child: Column(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -37,6 +37,23 @@ class ProductListingScreen extends StatelessWidget {
                     'https://simpleicon.com/wp-content/uploads/table-256x256.png',
                     width: 60,
                     height: 60,
+                  ),
+                  new Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      new Text('Stylish Modern Dining Tables'),
+                      new Text('Aron Table Center'),
+                      new Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          new Text('Rs. 24000'),
+                          new Image.network(
+                            'https://simpleicon.com/wp-content/uploads/table-256x256.png',
+                            height: 20,
+                          ),
+                        ],
+                      )
+                    ],
                   )
                 ],
               ),
