@@ -68,11 +68,11 @@ class HomeScreen extends StatelessWidget {
         ),
         body: Container(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               new CarouselSlider(
-                  height: 400.0,
+                  height: 300.0,
                   autoPlay: true,
                   reverse: false,
                   scrollDirection: Axis.horizontal,
