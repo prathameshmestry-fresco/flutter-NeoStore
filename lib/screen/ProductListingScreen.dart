@@ -30,7 +30,6 @@ class ProductListingScreen extends StatelessWidget {
               margin: const EdgeInsets.symmetric(vertical: 5),
               padding: const EdgeInsets.all(10),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   new Image.network(
@@ -38,36 +37,41 @@ class ProductListingScreen extends StatelessWidget {
                     width: 70,
                     height: 70,
                   ),
-                  new Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      new Text(
-                        'Stylish Modern Dining Tables',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 18),
-                      ),
-                      new Text(
-                        'Aron Table Center',
-                        style: TextStyle(
-                            fontWeight: FontWeight.normal, color: Colors.grey),
-                      ),
-                      new Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          new Text(
-                            'Rs. 24000',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.red,
-                                fontSize: 15),
-                          ),
-                          new Image.network(
-                            'https://simpleicon.com/wp-content/uploads/table-256x256.png',
-                            height: 18,
-                          ),
-                        ],
-                      )
-                    ],
+                  new Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    child: new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        new Text(
+                          'Stylish Modern Dining Tables',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16),
+                        ),
+                        new Text(
+                          'Aron Table Center',
+                          style: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              color: Colors.grey),
+                        ),
+                        new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            new Text(
+                              'Rs. 24000',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.red,
+                                  fontSize: 15),
+                            ),
+                            new Image.network(
+                              'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/star-512.png',
+                              height: 18,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
