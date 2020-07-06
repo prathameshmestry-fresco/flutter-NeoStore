@@ -72,7 +72,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               new CarouselSlider(
-                  height: 300.0,
+                  height: 250.0,
                   autoPlay: true,
                   reverse: false,
                   scrollDirection: Axis.horizontal,
@@ -90,6 +90,25 @@ class HomeScreen extends StatelessWidget {
                       },
                     );
                   }).toList()),
+              new GridView.builder(
+                padding: const EdgeInsets.all(10),
+                itemBuilder: (context, i) => new InkResponse(
+                  enableFeedback: true,
+                  child: ProductCategoryTile(categorList[i].id,
+                      categorList[i].title, categorList[i].imageUrl),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProductListingScreen()));
+                  },
+                ),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 3 / 2,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10),
+              ),
             ],
           ),
         ));
