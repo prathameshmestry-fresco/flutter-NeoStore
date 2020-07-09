@@ -68,10 +68,10 @@ class HomeScreen extends StatelessWidget {
         ),
         drawer: Drawer(
           child: ListView(
+            padding: EdgeInsets.zero,
             children: <Widget>[
               DrawerHeader(
-                  decoration: BoxDecoration(color: Colors.black),
-                  margin: EdgeInsets.all(5),
+                  decoration: BoxDecoration(color: Colors.black87),
                   child: Column(
                     children: <Widget>[
                       CircleAvatar(
@@ -83,38 +83,56 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Text(
                         'Prathamesh Mestry',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
-                      Text('abcdef@gmail.com')
+                      Text('abcdef@gmail.com',
+                          style: TextStyle(fontSize: 15, color: Colors.white))
                     ],
                   )),
-              ListTile(
-                title: Text('My Cart'),
-              ),
-              ListTile(
-                title: Text('Tables'),
-              ),
-              ListTile(
-                title: Text('Sofas'),
-              ),
-              ListTile(
-                title: Text('Chairs'),
-              ),
-              ListTile(
-                title: Text('Cupboards'),
-              ),
-              ListTile(
-                title: Text('My Accounts'),
-              ),
-              ListTile(
-                title: Text('Store Locator'),
-              ),
-              ListTile(
-                title: Text('My Orders'),
-              ),
-              ListTile(
-                title: Text('Logout'),
-              ),
+              Container(
+                decoration: BoxDecoration(color: Colors.black87),
+                padding: EdgeInsets.zero,
+                child: Column(
+                  children: <Widget>[
+                    ListTile(
+                      title: Text(
+                        'My Cart',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Tables',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Sofas',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text('Chairs'),
+                    ),
+                    ListTile(
+                      title: Text('Cupboards'),
+                    ),
+                    ListTile(
+                      title: Text('My Accounts'),
+                    ),
+                    ListTile(
+                      title: Text('Store Locator'),
+                    ),
+                    ListTile(
+                      title: Text('My Orders'),
+                    ),
+                    ListTile(
+                      title: Text('Logout'),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
