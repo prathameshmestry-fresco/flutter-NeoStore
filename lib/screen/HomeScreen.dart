@@ -67,47 +67,29 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
         body: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
+            scrollDirection: Axis.vertical,
             children: <Widget>[
-              new CarouselSlider(
-                  height: 250.0,
-                  autoPlay: true,
-                  reverse: false,
-                  scrollDirection: Axis.horizontal,
-                  initialPage: 0,
-                  items: imgList.map((imageLink) {
-                    return Builder(
-                      builder: (BuildContext context) {
-                        return Container(
-                            width: MediaQuery.of(context).size.width,
-                            margin: EdgeInsets.symmetric(horizontal: 5.0),
-                            child: Image.network(
-                              imageLink,
-                              fit: BoxFit.cover,
-                            ));
-                      },
-                    );
-                  }).toList()),
-              new GridView.builder(
-                padding: const EdgeInsets.all(10),
-                itemBuilder: (context, i) => new InkResponse(
-                  enableFeedback: true,
-                  child: ProductCategoryTile(categorList[i].id,
-                      categorList[i].title, categorList[i].imageUrl),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ProductListingScreen()));
-                  },
-                ),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 3 / 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10),
+              Container(
+                child: new CarouselSlider(
+                    height: 250.0,
+                    autoPlay: true,
+                    reverse: false,
+                    scrollDirection: Axis.horizontal,
+                    initialPage: 0,
+                    items: imgList.map((imageLink) {
+                      return Builder(
+                        builder: (BuildContext context) {
+                          return Container(
+                              width: 1200,
+                              margin: EdgeInsets.symmetric(horizontal: 5.0),
+                              child: Image.network(
+                                imageLink,
+                                fit: BoxFit.fitWidth,
+                              ));
+                        },
+                      );
+                    }).toList()),
               ),
             ],
           ),
