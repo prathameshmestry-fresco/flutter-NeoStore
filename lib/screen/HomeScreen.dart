@@ -66,6 +66,58 @@ class HomeScreen extends StatelessWidget {
             IconButton(icon: Icon(Icons.search), onPressed: () {})
           ],
         ),
+        drawer: Drawer(
+          child: ListView(
+            children: <Widget>[
+              DrawerHeader(
+                  decoration: BoxDecoration(color: Colors.black),
+                  margin: EdgeInsets.all(5),
+                  child: Column(
+                    children: <Widget>[
+                      CircleAvatar(
+                        child: Image.asset(
+                          'assets/profile-pic.png',
+                          width: 70,
+                          height: 70,
+                        ),
+                      ),
+                      Text(
+                        'Prathamesh Mestry',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Text('abcdef@gmail.com')
+                    ],
+                  )),
+              ListTile(
+                title: Text('My Cart'),
+              ),
+              ListTile(
+                title: Text('Tables'),
+              ),
+              ListTile(
+                title: Text('Sofas'),
+              ),
+              ListTile(
+                title: Text('Chairs'),
+              ),
+              ListTile(
+                title: Text('Cupboards'),
+              ),
+              ListTile(
+                title: Text('My Accounts'),
+              ),
+              ListTile(
+                title: Text('Store Locator'),
+              ),
+              ListTile(
+                title: Text('My Orders'),
+              ),
+              ListTile(
+                title: Text('Logout'),
+              ),
+            ],
+          ),
+        ),
         body: Container(
           child: ListView(
             scrollDirection: Axis.vertical,
