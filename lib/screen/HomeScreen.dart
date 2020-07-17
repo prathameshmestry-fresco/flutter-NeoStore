@@ -101,34 +101,97 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     ListTile(
+                      leading: Image.asset(
+                        'assets/cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
                       title: Text(
                         'Tables',
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
+                      trailing: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
                     ),
                     ListTile(
+                      leading: Image.asset(
+                        'assets/cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
                       title: Text(
                         'Sofas',
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
                     ),
                     ListTile(
-                      title: Text('Chairs'),
+                      leading: Image.asset(
+                        'assets/cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
+                      title: Text(
+                        'Chairs',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
                     ),
                     ListTile(
-                      title: Text('Cupboards'),
+                      leading: Image.asset(
+                        'assets/cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
+                      title: Text(
+                        'Cupboards',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
                     ),
                     ListTile(
-                      title: Text('My Accounts'),
+                      leading: Image.asset(
+                        'assets/cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
+                      title: Text(
+                        'My Accounts',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
                     ),
                     ListTile(
-                      title: Text('Store Locator'),
+                      leading: Image.asset(
+                        'assets/cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
+                      title: Text(
+                        'Store Locator',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
                     ),
                     ListTile(
-                      title: Text('My Orders'),
+                      leading: Image.asset(
+                        'assets/cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
+                      title: Text(
+                        'My Orders',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
                     ),
                     ListTile(
-                      title: Text('Logout'),
+                      leading: Image.asset(
+                        'assets/cart.png',
+                        width: 25,
+                        height: 25,
+                      ),
+                      title: Text(
+                        'Logout',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
                     ),
                   ],
                 ),
